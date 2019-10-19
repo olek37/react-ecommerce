@@ -18,6 +18,7 @@ import { createUserProfileDocument, auth } from './firebase/firebase.utils';
 import { setCurrentUser } from './redux/user/user.actions';
 import { selectCurrentUser } from './redux/user/user.selector';
 
+
 class App extends React.Component {
   constructor() {
     super();
@@ -40,7 +41,7 @@ class App extends React.Component {
             ...snapShot.data()
           });
         });
-      } else {
+      } else{ 
         setCurrentUser(userAuth);
       }
     })
